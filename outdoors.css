@@ -1,0 +1,319 @@
+
+/* Author Mark Singleton
+created on 2/22/2016 */
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 1300px;
+	background-color: #f2f0ea;
+}
+h1 {
+	font-family: Georgia;
+	font-size: 1.5em;
+	color: #fff;
+	text-shadow:#ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+	padding-left: 1.25em;
+}
+h2 {
+	color: #8f1e18;
+	text-shadow:#ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+}
+header {
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+	background-image: url('http://wildcathvac.com/wp-content/uploads/2014/10/SkySlider.png');
+	width: 100%;
+}
+#current_time {
+	font-family: Georgia;
+	font-size: 1em;
+	color: #fff;
+	text-shadow: .05em .08em .2em black;
+	text-align: left;
+	padding-left: 40px;
+}
+#current_date {
+	font-family: Georgia;
+	font-size: 1em;
+	color: #fff;
+	text-shadow: .05em .08em .2em black;
+	text-align: left;
+	padding-left: 40px;
+}
+a:link {	
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+	color: #86fa3e;
+}
+a:active {
+    text-decoration: underline;
+}
+ul li a {
+	font-family: Georgia;
+	color: #f7f7cf;
+	text-shadow: .05em .08em .2em black;
+	list-style: none;	
+	text-decoration: none;
+}
+nav ul {
+	text-align: right;
+}
+nav ul li {
+	font-size: 1.5em;
+	padding: 0px;
+	padding-right: 60px;
+	display: inline-block;
+} 
+aside ul li {
+	font-size: 2em;
+	padding-top: 50px;
+	list-style: none;
+}
+aside {
+	margin-top: 130px;
+	position: relative;
+	float: left;
+	width: 20%;
+	background-image:url('http://tinyurl.com/jtugzkh');
+	top: 0px;
+	bottom: 0px;	
+	background-size: cover;
+	height: 1170px;
+}
+#home_section {
+	margin-top: 160px;
+	float: right;
+	width: 79.5%;
+}
+form {
+	float: left;
+	padding-top: 5px;
+	padding-left: 20px;
+	font-family: Georgia;
+	font-size: 1.5em;
+	text-align: left;
+}
+#my_article {
+	color: #5c0f0c;
+	font-family: Georgia;
+	font-size: 1.3em;
+	font-style: oblique;
+}
+#all_vehicles {
+	height: 375px;
+	width: 520px;
+	margin-top: 80px;
+	margin-left: 400px;
+	box-shadow: 10px 10px 15px grey;
+}
+#home_frame {
+	float: right;
+	height: 502px;
+	width: 53%;
+	margin-right: 40px;
+	box-shadow: 10px 10px 15px grey;
+}
+#water_preference {
+	height: 23px;
+	width: 160px;
+	color: #db4900;
+	font-size: .8em;
+}
+#vehicle_type  {
+	height: 23px;
+	width: 160px;
+	color: #db4900;
+	font-size: .8em;
+}
+.option_style   {
+	color: #db4900;
+	background-color: #fff;
+	font-size: .8em;
+}
+#party_size {
+	height: 20px;
+	width: 80px;
+	color: #db4900;
+	font-size: .8em;
+}
+.btn {
+  background: #ffdd57;
+  
+  background-image: -webkit-linear-gradient(top, #ffdd57, #5e0505);
+  background-image: -moz-linear-gradient(top, #ffdd57, #5e0505);
+  background-image: -ms-linear-gradient(top, #ffdd57, #5e0505);
+  background-image: -o-linear-gradient(top, #ffdd57, #5e0505);
+  background-image: linear-gradient(to bottom, #ffdd57, #5e0505);
+  
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  
+  text-shadow: 2px 0px 3px #692312;
+  
+  -webkit-box-shadow: 8px 9px 15px #666666;
+  -moz-box-shadow: 8px 9px 15px #666666;
+  box-shadow: 8px 9px 15px #666666;
+  
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 40%;
+}
+.btn:hover {
+  background: #ced6a0;
+  background-image: -webkit-linear-gradient(top, #ced6a0, #418530);
+  background-image: -moz-linear-gradient(top, #ced6a0, #418530);
+  background-image: -ms-linear-gradient(top, #ced6a0, #418530);
+  background-image: -o-linear-gradient(top, #ced6a0, #418530);
+  background-image: linear-gradient(to bottom, #ced6a0, #418530);
+  text-decoration: none;
+}
+.btn:focus {
+   outline: 0;
+}
+footer {
+	bottom: 0px;
+	font-size: 20px;
+	color: #ffffff;
+	font-weight: bold;
+	text-shadow: 6px 6px 5px black;
+	clear: both;
+	text-align: center;
+	padding: 25px;
+	background-image: url('http://cdn.pcwallart.com/images/ocean-water-background-wallpaper-2.jpg');
+}
+.beach_section {
+	margin-top: 190px;
+	margin-left: 10%;
+	width: 60%;
+	float: left;
+	padding-right: 30px;
+	font-family: Georgia;
+	font-size: 2em;
+	color: blue;
+	text-shadow: .05em .08em .2em green;
+}
+#beach_frame {
+	margin-left: 10%;
+	width: 60%;
+	height: 600px;
+	box-shadow: 10px 10px 15px grey;
+ }
+#beach_article {
+	margin-top: 2%;
+	margin-left: 30%;
+	width: 60%;
+	text-align: left;
+	font-weight: bold;
+	font-size: 2em;
+	font-family: George;
+	color: #47907C;
+	text-shadow: .05em .075em .1em black;
+}
+.park_section  {
+	margin-top: 190px;
+	margin-left: 10%;
+	width: 60%;
+	float: left;
+	padding-right: 30px;
+	font-family: Georgia;
+	font-size: 2em;
+	color: blue;
+	text-shadow: .05em .08em .2em green;
+}
+#park_frame {
+	margin-left: 10%;
+	width: 60%;
+	height: 600px;
+	box-shadow: 10px 10px 15px grey;		
+}
+#park_article {
+	margin-top: 2%;
+	margin-left: 30%;
+	width: 60%;
+	text-align: left;
+	font-weight: bold;
+	font-size: 2em;
+	font-family: George;
+	color: #47907C;
+	text-shadow: .05em .075em .1em black;
+}
+.fish_section {
+	margin-top: 190px;
+	margin-left: 10%;
+	width: 60%;
+	float: left;
+	padding-right: 30px;
+	font-family: Georgia;
+	font-size: 2em;
+	color: blue;
+	text-shadow: .05em .08em .2em green;
+}
+#fish_frame {
+	margin-left: 10%;
+	width: 60%;
+	height: 600px;
+	box-shadow: 10px 10px 15px grey;		
+}
+#fish_article {
+	margin-top: 2%;
+	margin-left: 30%;
+	width: 60%;
+	text-align: left;
+	font-weight: bold;
+	font-size: 2em;
+	font-family: George;
+	color: #47907C;
+	text-shadow: .05em .075em .1em black;
+}
+.event_section {
+	margin-top: 190px;
+	margin-left: 10%;
+	width: 60%;
+	float: left;
+	padding-right: 30px;
+	font-family: Georgia;
+	font-size: 2em;
+	color: blue;
+	text-shadow: .05em .08em .2em green;
+}
+#event_frame {
+	margin-left: 10%;
+	width: 60%;
+	height: 600px;
+	box-shadow: 10px 10px 15px grey;		
+}
+#event_article {
+	margin-top: 2%;
+	margin-left: 30%;
+	width: 60%;
+	text-align: left;
+	font-weight: bold;
+	font-size: 2em;
+	font-family: George;
+	color: #47907C;
+	text-shadow: .05em .075em .1em black;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

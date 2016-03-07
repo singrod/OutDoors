@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Author Mark Singleton
+created on 2/22/2016 -->
+<html lang="en-us">
+<head>
+<title>OutDoors Beaches</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="outdoors.css" rel="stylesheet" type="text/css"/>
+<script src="outdoors.js"></script>
+<meta charset="UTF-8">
+</head>
+<body onload="getMyDate(); getMyTime(); setInterval('getMyTime()', 1000 )">
+    <header>
+		<h1>Central Florida - OutDoor Fun</h1>
+		<p id="current_date"></p>
+		<p id="current_time"></p>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="beaches.html" style="color: red">Beaches</a></li>
+					<li><a href="state_parks.html">State Parks</a></li>
+					<li><a href="fishing.html">Fishing</a></li>
+					<li><a href="events.html">Events</a></li>
+				</ul>
+			</nav>
+    </header>
+	<aside>
+		<ul>
+      		<li><a href="index.html">Home</a></li>
+			<li><a href="beaches.html" style="color: red">Beaches</a></li>
+			<li><a href="state_parks.html">State Parks</a></li>
+			<li><a href="fishing.html">Fishing</a></li>
+			<li><a href="events.html">Events</a></li>
+		</ul>
+	</aside>
+	<section class="beach_section" >
+		<a href="#" onclick="getBeach('ormond')">Ormond Beach</a> &nbsp; &nbsp;
+		<a href="#" onclick="getBeach('daytona')">Daytona Beach</a> &nbsp; &nbsp;
+		<a href="#" onclick="getBeach('cocoa')">Cocoa Beach </a> &nbsp; &nbsp;
+		<a href="#" onclick="getBeach('melborne')">Melborne Beach</a><br/><br/>
+	</section>
+	<section ><iframe id="beach_frame" src="http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/beautiful-nature-high-definition-full-screen-wallpaper-image-free.jpg"></iframe></section>
+	<section id="beach_article"><p>"Florida is well known for the hundreds of miles of beaches on the east coast, west coast, and the Keys. For many, it's just a short walk or short drive away. From Central Florida, here are four of the most popular beaches we enjoy year-round."</p></section>
+	<script>
+		function getBeach(beach){
+		var beachChoice;
+			switch (beach){
+				case 'ormond':
+					beachChoice = "http://www.tripadvisor.com/Tourism-g34517-Ormond_Beach_Florida-Vacations.html";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+				case 'daytona':
+					beachChoice =  "http://www.tripadvisor.com/Tourism-g34172-Daytona_Beach_Florida-Vacations.html";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+				case 'cocoa':
+					beachChoice =  "http://www.tripadvisor.com/Tourism-g34145-Cocoa_Beach_Brevard_County_Florida-Vacations.html";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+				case 'melborne':
+					beachChoice =  "http://www.tripadvisor.com/Tourism-g34434-Melbourne_Beach_Brevard_County_Florida-Vacations.html";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+				default:
+					beachChoice =  "http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/beautiful-nature-high-definition-full-screen-wallpaper-image-free.jpg";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+			}
+		}
+	</script>
+	<footer>
+		<p>This site was created by Mark Singleton 02/22/2016</p>
+	</footer>
+</body>
+</html>

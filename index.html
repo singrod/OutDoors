@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Author Mark Singleton
+created on 2/22/2016 -->
+<html lang="en-us">
+<head>
+<title>OutDoors Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="outdoors.css" rel="stylesheet" type="text/css"/> 
+<script src="outdoors.js"></script> 
+<meta charset="UTF-8">
+</head>
+<body onload="getMyDate(); getMyTime(); setInterval('getMyTime()', 1000 )">
+    <header>
+		<h1>Central Florida - OutDoor Fun</h1>
+		<p id="current_date"></p>
+		<p id="current_time"></p>
+			<nav>
+				<ul>
+					<li><a href="index.html" style="color: red">Home</a></li>
+					<li><a href="beaches.html">Beaches</a></li>
+					<li><a href="state_parks.html">State Parks</a></li>
+					<li><a href="fishing.html">Fishing</a></li>
+					<li><a href="events.html">Events</a></li>
+				</ul>
+			</nav>
+    </header>
+	<aside>
+		<ul>
+      		<li><a href="index.html" style="color: red">Home</a></li>
+			<li><a href="beaches.html">Beaches</a></li>
+			<li><a href="state_parks.html">State Parks</a></li>
+			<li><a href="fishing.html">Fishing</a></li>
+			<li><a href="events.html">Events</a></li>
+		</ul>
+	</aside>
+	<section id="home_section">
+		<p id="my_article">We all know about Walt Disney World, Universal Studios, Sea World, and other major theme parks. These are all great places to have fun with our friends and families. However, this is just the tip of the iceberg. Florida is our country's best playground. If you enjoy being ourdoors, Central Florida has it all. Take a look at what the residents of Central Florida enjoy year-round.</p>
+		<form>
+			<h2>Find your interests:</h2><br/>
+			Water Type: &nbsp;
+			<input type="radio" name="water_type" value="fresh" checked>Fresh
+			<input type="radio" name="water_type" value="salt">Salt
+			<input type="radio" name="water_type" value="both">Both
+			<input type="radio" name="water_type" value="none">None<br/><br/>
+			What is your water location preference? &nbsp;
+			<select id="water_preference" name="water_preference">
+				<option class="option_style" value="offshore">Offshore</option>
+				<option class="option_style" value="inshore">Inshore</option>
+				<option class="option_style" value="onshore">Onshore</option>
+				<option class="option_style" value="none">None</option>
+			</select><br/><br/>
+			Vehicle Type: &nbsp;
+			<select id="vehicle_type" name="vehicle_type" >
+				<option class="option_style" value="sailboat">Sail Boat</option>
+				<option class="option_style" value="speedboat">Speed Boat</option>
+				<option class="option_style" value="fishing_boat">Fishing Boat</option>
+				<option class="option_style" value="yacht">Yacht</option>
+				<option class="option_style" value="canoe">Canoe</option>
+				<option class="option_style" value="kayak">Kayak</option>
+				<option class="option_style" value="jetski">Jetski</option>
+			</select><br/><br/>
+			Vehicle Status: &nbsp;
+			<input type="radio" name="vehicle_status" value="owned" checked>Owned
+			<input type="radio" name="vehicle_status" value="rental">Rental
+			<input type="radio" name="vehicle_status" value="chartered">Chartered
+			<input type="radio" name="vehicle_status" value="none">None<br/><br/>
+			Activity Time: &nbsp;
+			<input type="radio" name="activity_time" value="early_morning" checked>Early Morning
+			<input type="radio" name="activity_time" value="afternoon">Afternoon
+			<input type="radio" name="activity_time" value="evening">Evening<br/><br/>
+			How many people are in your group? &nbsp; <input type="number" id="party_size" name="party_size" min="0" max="100" step="1" value="0"><br/><br/>
+			<input class="btn" type="button" value="Submit" onclick="checkVehicle()">
+		</form>
+		<iframe id="home_frame" src="https://www.floridaholidays.com/uploads/images/beaches%201a.jpg"></iframe>
+	</section>
+	<img id="all_vehicles" src="http://boynewatersports.com/wp-content/uploads/photo-44.jpg" alt="Boats, Skis, and Kayaks" />		
+	<footer>
+		<p>This site was created by Mark Singleton 02/22/2016</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Author Mark Singleton
+created on 2/22/2016 -->
+<html lang="en-us">
+<head>
+<title>OutDoors Fishing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="outdoors.css" rel="stylesheet" type="text/css"/>
+<script src="outdoors.js"></script>
+<meta charset="UTF-8">
+</head>
+<body onload="getMyDate(); getMyTime(); setInterval('getMyTime()', 1000 )">
+    <header>
+		<h1>Central Florida - OutDoor Fun</h1>
+		<p id="current_date"></p>
+		<p id="current_time"></p>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="beaches.html">Beaches</a></li>
+					<li><a href="state_parks.html">State Parks</a></li>
+					<li><a href="fishing.html" style="color: red">Fishing</a></li>
+					<li><a href="events.html">Events</a></li>
+				</ul>
+			</nav>
+    </header>
+	<aside>
+		<ul>
+      		<li><a href="index.html">Home</a></li>
+			<li><a href="beaches.html">Beaches</a></li>
+			<li><a href="state_parks.html">State Parks</a></li>
+			<li><a href="fishing.html" style="color: red">Fishing</a></li>
+			<li><a href="events.html">Events</a></li>
+		</ul>
+	</aside>
+	<section class="fish_section" >
+		<a href="#" onclick="getFish('salt')">Salt Water</a> &nbsp; &nbsp;
+		<a href="#" onclick="getFish('fresh')">Fresh Water</a><br/><br/>
+	</section>
+	<section><iframe id="fish_frame" src="http://www.theyachtmarket.com/boatimages/resize/18/1a/52363171gallery_wm.jpg"></iframe>	</section>
+	<section id="fish_article"><p>"Florida is well known for the hundreds of miles of beaches on the east coast, west coast, and the Keys. For many, it's just a short walk or short drive away. From Central Florida, here are four of the most popular beaches we enjoy year-round."</p>
+	</section>
+	<script>
+		function getFish(fish){
+		var fishChoice;
+			switch (fish){
+				case 'salt':
+					fishChoice = "http://www.floridasportsman.com/regions/east-central/";
+					document.getElementById('fish_frame').src = fishChoice;
+				break;
+				case 'fresh':
+					fishChoice =  "http://www.floridasportsman.com/freshwater/";
+					document.getElementById('fish_frame').src = fishChoice;
+				break;
+				default:
+					fishChoice =  "http://bigbamboofishingcharters.com/wp-content/uploads/2016/02/BIG-BAMBOO-FLORIDA-FISHING-CHARTERS-BIG-GAME.png";
+					document.getElementById('fish_frame').src = fishChoice;
+				break;
+			}
+		}
+	</script>
+	<footer>
+		<p>This site was created by Mark Singleton 02/22/2016</p>
+	</footer>
+</body>
+</html>
