@@ -26,11 +26,11 @@
 		currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
 		currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
 		
-		var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+		var timeOfDay = ( currentHours < 12 ) ? "am" : "pm";
 		currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
 		currentHours = ( currentHours == 0 ) ? 12 : currentHours;
 		
-		var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+		var currentTimeString = currentHours + ":" + currentMinutes +" " + timeOfDay;
 				
 		document.getElementById("current_time").innerHTML = currentTimeString;
 	}
@@ -367,5 +367,93 @@
 	}
 	
 }
+
+	function getPark(park){
+		var parkChoice;
+			switch (park){
+				case 'wekiwa':
+					parkChoice = "http://www.stateparks.com/wekiwa_springs_state_park_in_florida.html";
+					document.getElementById('park_frame').src = parkChoice;
+				break;
+				case 'sebastian':
+					parkChoice =  "https://www.floridastateparks.org/park/Sebastian-Inlet";
+					document.getElementById('park_frame').src = parkChoice;
+				break;
+				case 'tomoka':
+					parkChoice =  "https://www.floridastateparks.org/park/Tomoka";
+					document.getElementById('park_frame').src = parkChoice;
+				break;
+				case 'de_leon':
+					parkChoice =  "https://www.floridastateparks.org/park/De-Leon-Springs";
+					document.getElementById('park_frame').src = parkChoice;
+				break;
+				default:
+					parkChoice =  "http://www.trbimg.com/img-555b687b/turbine/os-most-popular-florida-state-parks-pictures";
+					document.getElementById('park_frame').src = parkChoice;
+				break;
+			}
+		}
+		
+	function getEvent(event){
+		var eventChoice;
+			switch (event){
+				case 'daytona':
+					eventChoice = "http://www.daytonafreeride.com/";
+					document.getElementById('event_frame').src = eventChoice;
+				break;
+				case 'cocoa':
+					eventChoice =  "http://superboat.com/race-schedule/cocoa-beach-schedule/";
+					document.getElementById('event_frame').src = eventChoice;
+				break;
+				default:
+					eventChoice =  "http://bigbamboofishingcharters.com/wp-content/uploads/2016/02/BIG-BAMBOO-FLORIDA-FISHING-CHARTERS-BIG-GAME.png";
+					document.getElementById('event_frame').src = eventChoice;
+				break;
+			}
+		}
+		
+	function getBeach(beach){
+		var beachChoice;
+			switch (beach){
+				case 'ormond':
+					beachChoice = "http://www.tripadvisor.com/Tourism-g34517-Ormond_Beach_Florida-Vacations.html";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+				case 'daytona':
+					beachChoice =  "http://www.tripadvisor.com/Tourism-g34172-Daytona_Beach_Florida-Vacations.html";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+				case 'cocoa':
+					beachChoice =  "http://www.tripadvisor.com/Tourism-g34145-Cocoa_Beach_Brevard_County_Florida-Vacations.html";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+				case 'melborne':
+					beachChoice =  "http://www.tripadvisor.com/Tourism-g34434-Melbourne_Beach_Brevard_County_Florida-Vacations.html";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+				default:
+					beachChoice =  "http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/beautiful-nature-high-definition-full-screen-wallpaper-image-free.jpg";
+					document.getElementById('beach_frame').src = beachChoice;
+				break;
+			}
+		}
+		
+	function getFish(fish){
+		var fishChoice;
+			switch (fish){
+				case 'salt':
+					fishChoice = "http://www.floridasportsman.com/regions/east-central/";
+					document.getElementById('fish_frame').src = fishChoice;
+				break;
+				case 'fresh':
+					fishChoice =  "http://www.floridasportsman.com/freshwater/";
+					document.getElementById('fish_frame').src = fishChoice;
+				break;
+				default:
+					fishChoice =  "http://bigbamboofishingcharters.com/wp-content/uploads/2016/02/BIG-BAMBOO-FLORIDA-FISHING-CHARTERS-BIG-GAME.png";
+					document.getElementById('fish_frame').src = fishChoice;
+				break;
+			}
+		}
 	
 	
