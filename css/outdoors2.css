@@ -36,12 +36,12 @@ form{
 	background: -webkit-linear-gradient(45deg,  rgba(44,83,158,1) 0%,rgba(63,226,137,1) 45%,rgba(69,240,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(45deg,  rgba(44,83,158,1) 0%,rgba(63,226,137,1) 45%,rgba(69,240,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#45f0f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
 	
 }
-.category_selections {
-	display: inline-block;
-	font-size: 2em;
+
+ul.category_selections li{	
+	list-style-type: circle; 
+	font-size: 1.8em;
 	color: blue;
 	text-shadow: .05em .08em .2em green;
 }
