@@ -493,45 +493,77 @@
 
 /*functions brings viewer to destination site*/
 	function getPark(park){
-		var parkChoice;
+		var myWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 			switch (park){
 				case 'wekiwa':
-					parkChoice = "http://www.stateparks.com/wekiwa_springs_state_park_in_florida.html";
-					document.getElementById('park_frame').src = parkChoice;
+					if(myWindow > 991){
+						document.getElementById('park_frame').src = "http://www.stateparks.com/wekiwa_springs_state_park_in_florida.html";
+					} else {
+						document.getElementById('wekiwaLink').href = "http://www.stateparks.com/wekiwa_springs_state_park_in_florida.html";
+						document.getElementById('wekiwaLink').click();
+					}				
 				break;
 				case 'sebastian':
-					parkChoice =  "https://www.floridastateparks.org/park/Sebastian-Inlet";
-					document.getElementById('park_frame').src = parkChoice;
+					if(myWindow > 991){
+						document.getElementById('park_frame').src = "https://www.floridastateparks.org/park/Sebastian-Inlet";
+					} else {
+						document.getElementById('sebastianLink').href = "https://www.floridastateparks.org/park/Sebastian-Inlet";
+						document.getElementById('sebastianLink').click();
+					}					
 				break;
 				case 'tomoka':
-					parkChoice =  "https://www.floridastateparks.org/park/Tomoka";
-					document.getElementById('park_frame').src = parkChoice;
+					if(myWindow > 991){
+						document.getElementById('park_frame').src = "https://www.floridastateparks.org/park/Tomoka";
+					} else {
+						document.getElementById('tomokaLink').href = "https://www.floridastateparks.org/park/Tomoka";
+						document.getElementById('tomokaLink').click();
+					}					
 				break;
 				case 'de_leon':
-					parkChoice =  "https://www.floridastateparks.org/park/De-Leon-Springs";
-					document.getElementById('park_frame').src = parkChoice;
+					if(myWindow > 991){
+						document.getElementById('park_frame').src = "https://www.floridastateparks.org/park/De-Leon-Springs";
+					} else {
+						document.getElementById('de_leon').href = "https://www.floridastateparks.org/park/De-Leon-Springs";
+						document.getElementById('de_leon').click();
+					}					
 				break;
 				default:
-					parkChoice =  "http://www.trbimg.com/img-555b687b/turbine/os-most-popular-florida-state-parks-pictures";
-					document.getElementById('park_frame').src = parkChoice;
+					if(myWindow > 991){
+						document.getElementById('park_frame').src = "http://www.trbimg.com/img-555b687b/turbine/os-most-popular-florida-state-parks-pictures";
+					} else {
+						document.getElementById('wekiwaLink').href = "http://www.trbimg.com/img-555b687b/turbine/os-most-popular-florida-state-parks-pictures";
+						document.getElementById('wekiwaLink').click();
+					}					
 				break;
 			}
 		}
 		
 	function getEvent(event){
-		var eventChoice;
+		var myWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 			switch (event){
 				case 'daytona':
-					eventChoice = "http://www.daytonafreeride.com/";
-					document.getElementById('event_frame').src = eventChoice;
+					if(myWindow > 991){
+						document.getElementById('event_frame').src = "http://www.daytonafreeride.com/";
+					} else {
+						document.getElementById('daytonaLink').href = "http://www.daytonafreeride.com/";
+						document.getElementById('daytonaLink').click();
+					}					
 				break;
 				case 'cocoa':
-					eventChoice =  "http://superboat.com/race-schedule/cocoa-beach-schedule/";
-					document.getElementById('event_frame').src = eventChoice;
+					if(myWindow > 991){
+						document.getElementById('event_frame').src = "http://superboat.com/race-schedule/cocoa-beach-schedule/";
+					} else {
+						document.getElementById('cocoaLink').href = "http://superboat.com/race-schedule/cocoa-beach-schedule/";
+						document.getElementById('cocoaLink').click();
+					}				
 				break;
 				default:
-					eventChoice =  "http://bigbamboofishingcharters.com/wp-content/uploads/2016/02/BIG-BAMBOO-FLORIDA-FISHING-CHARTERS-BIG-GAME.png";
-					document.getElementById('event_frame').src = eventChoice;
+					 if(myWindow > 991){
+						document.getElementById('event_frame').src = "http://bigbamboofishingcharters.com/wp-content/uploads/2016/02/BIG-BAMBOO-FLORIDA-FISHING-CHARTERS-BIG-GAME.png";
+					} else {
+						document.getElementById('daytonaLink').href = "http://bigbamboofishingcharters.com/wp-content/uploads/2016/02/BIG-BAMBOO-FLORIDA-FISHING-CHARTERS-BIG-GAME.png";
+						document.getElementById('daytonaLink').click();
+					}					
 				break;
 			}
 		}
@@ -543,62 +575,71 @@
 					if(myWindow > 991){
 						document.getElementById('beach_frame').src = "http://www.tripadvisor.com/Tourism-g34517-Ormond_Beach_Florida-Vacations.html";
 					} else {
-						document.getElementById('beachLink').href = "http://www.tripadvisor.com/Tourism-g34517-Ormond_Beach_Florida-Vacations.html";
-						document.getElementById('beachLink').click();
+						document.getElementById('ormondLink').href = "http://www.tripadvisor.com/Tourism-g34517-Ormond_Beach_Florida-Vacations.html";
+						document.getElementById('ormondLink').click();
 					}					
 				break;
 				case 'daytona':
 					if(myWindow > 991){
 						document.getElementById('beach_frame').src = "http://www.tripadvisor.com/Tourism-g34172-Daytona_Beach_Florida-Vacations.html";
 					} else {
-						document.getElementById('beachLink').href = "http://www.tripadvisor.com/Tourism-g34172-Daytona_Beach_Florida-Vacations.html";
-						document.getElementById('beachLink').click();
+						document.getElementById('daytona_link').href = "http://www.tripadvisor.com/Tourism-g34172-Daytona_Beach_Florida-Vacations.html";
+						document.getElementById('daytona_link').click();
 					}					
 				break;
 				case 'cocoa':
 					if(myWindow > 991){
 						document.getElementById('beach_frame').src = "http://www.tripadvisor.com/Tourism-g34145-Cocoa_Beach_Brevard_County_Florida-Vacations.html";
 					} else {
-						document.getElementById('beachLink').href = "http://www.tripadvisor.com/Tourism-g34145-Cocoa_Beach_Brevard_County_Florida-Vacations.html";
-						document.getElementById('beachLink').click();
+						document.getElementById('cocoa_link').href = "http://www.tripadvisor.com/Tourism-g34145-Cocoa_Beach_Brevard_County_Florida-Vacations.html";
+						document.getElementById('cocoa_link').click();
 					}					
 				break;
 				case 'melborne':
 					if(myWindow > 991){
 						document.getElementById('beach_frame').src = "http://www.tripadvisor.com/Tourism-g34434-Melbourne_Beach_Brevard_County_Florida-Vacations.html";
 					} else {
-						document.getElementById('beachLink').href = "http://www.tripadvisor.com/Tourism-g34434-Melbourne_Beach_Brevard_County_Florida-Vacations.html";
-						document.getElementById('beachLink').click();
+						document.getElementById('melbourneLink').href = "http://www.tripadvisor.com/Tourism-g34434-Melbourne_Beach_Brevard_County_Florida-Vacations.html";
+						document.getElementById('melbourneLink').click();
 					}					
 				break;
 				default:
 					if(myWindow > 991){
 						document.getElementById('beach_frame').src =  "http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/beautiful-nature-high-definition-full-screen-wallpaper-image-free.jpg";
 					} else {
-						document.getElementById('beachLink').href =  "http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/beautiful-nature-high-definition-full-screen-wallpaper-image-free.jpg";
-						document.getElementById('beachLink').click();
+						document.getElementById('ormondLink').href =  "http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/beautiful-nature-high-definition-full-screen-wallpaper-image-free.jpg";
+						document.getElementById('ormondLink').click();
 					}					
 				break;
 			}
 		}
 		
 	function getFish(fish){
-		var fishChoice;
+		var myWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 			switch (fish){
 				case 'salt':
-					fishChoice = "http://www.floridasportsman.com/regions/east-central/";
-					document.getElementById('fish_frame').src = fishChoice;
+					if(myWindow > 991){
+						document.getElementById('fish_frame').src = "http://www.floridasportsman.com/regions/east-central/";
+					} else {
+						document.getElementById('saltLink').href = "http://www.floridasportsman.com/regions/east-central/";
+						document.getElementById('saltLink').click();
+					}					
 				break;
 				case 'fresh':
-					fishChoice =  "http://www.floridasportsman.com/freshwater/";
-					document.getElementById('fish_frame').src = fishChoice;
+					if(myWindow > 991){
+						document.getElementById('fish_frame').src = "http://www.floridasportsman.com/freshwater/";
+					} else {
+						document.getElementById('freshLink').href = "http://www.floridasportsman.com/freshwater/";
+						document.getElementById('freshLink').click();
+					}					
 				break;
 				default:
-					fishChoice =  "http://bigbamboofishingcharters.com/wp-content/uploads/2016/02/BIG-BAMBOO-FLORIDA-FISHING-CHARTERS-BIG-GAME.png";
-					document.getElementById('fish_frame').src = fishChoice;
+					if(myWindow > 991){
+						document.getElementById('fish_frame').src = document.getElementById('fish_frame').src = "http://bigbamboofishingcharters.com/wp-content/uploads/2016/02/BIG-BAMBOO-FLORIDA-FISHING-CHARTERS-BIG-GAME.png";
+					} else {
+						document.getElementById('saltLink').href = document.getElementById('fish_frame').src = "http://bigbamboofishingcharters.com/wp-content/uploads/2016/02/BIG-BAMBOO-FLORIDA-FISHING-CHARTERS-BIG-GAME.png";
+						document.getElementById('saltLink').click();
+					}					
 				break;
 			}
-		}
-		
-
-	
+		}	
