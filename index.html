@@ -10,17 +10,14 @@ created on 2/22/2016 -->
 <meta charset="UTF-8">
 </head>
 <body onload="getMyDate(); getMyTime(); setInterval('getMyTime()', 1000 )">
-
 	<nav class="navbar navbar-inverse navbar-fixed-top"  role="navigation" >
 		<div class="container">
-			<div class="navbar-header">
-			
+			<div class="navbar-header">			
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> 
 				</button>			
-			
 				<a href="#" class="navbar-brand">Central Florida - Outdoor Fun</a>				
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
@@ -34,7 +31,6 @@ created on 2/22/2016 -->
 			</div>
 		</div>
 	</nav>
-
 	<div class="container">	
 		<div class="row">
 			<div id="date_time" class="col-sm-12">
@@ -43,16 +39,13 @@ created on 2/22/2016 -->
 			</div>
 			<div class="col-sm-12 content">								
 				<blockquote>
-					<p id="my_article">We all know about Walt Disney World, Universal Studios, Sea World, and other major theme parks. These are all great places to have fun with our friends and families. However, this is just the tip of the iceberg. Florida is our country's best playground. If you enjoy being ourdoors, Central Florida has it all. Take a look at what the residents of Central Florida enjoy year-round.</p>
+					<p class="my_article">We all know about Walt Disney World, Universal Studios, Sea World, and other major theme parks. These are all great places to have fun with our friends and families. However, this is just the tip of the iceberg. Florida is our country's best playground. If you enjoy being ourdoors, Central Florida has it all. Take a look at what the residents of Central Florida enjoy year-round.</p>
 				</blockquote>
 			</div>			
 		</div>
 			<div class="col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">				
-				
-				<form role="form" id="myForm">
-				
-					<h2 id="form_title">Find your interests:</h2>
-				
+				<form role="form" id="myForm">				
+					<h2 id="form_title">Find your interests:</h2>				
 					<div class="form-group">
 						<label for="water_type">Water Type: </label>		
 						<select id="water_type" name="water_type">
@@ -61,8 +54,7 @@ created on 2/22/2016 -->
 							<option class="option_style" value="both">Both</option>
 							<option class="option_style" value="none">None</option>
 						</select>
-					</div>
-						
+					</div>						
 					<div class="form-group">
 						<label for="water_preference">Location preference: </label>			
 						<select id="water_preference" name="water_preference">
@@ -71,8 +63,7 @@ created on 2/22/2016 -->
 							<option class="option_style" value="onshore">Onshore</option>
 							<option class="option_style" value="none">None</option>
 						</select>
-					</div>
-					
+					</div>					
 					<div class="form-group">
 						<label for="vehicle_type">Vehicle Type:</label>						
 						<select id="vehicle_type" name="vehicle_type" >
@@ -84,8 +75,7 @@ created on 2/22/2016 -->
 							<option class="option_style" value="kayak">Kayak</option>
 							<option class="option_style" value="jetski">Jetski</option>
 						</select>
-					</div>
-					
+					</div>					
 					<div class="form-group">
 						<label for="vehicle_status">Vehicle Status: </label>		
 						<select id="vehicle_status" name="vehicle_status">
@@ -94,8 +84,7 @@ created on 2/22/2016 -->
 							<option class="option_style" value="chartered">Chartered</option>
 							<option class="option_style" value="none">None</option>
 						</select>
-					</div>
-					
+					</div>					
 					<div class="form-group">
 						<label for="activity_time">Activity Time: </label>		
 						<select id="activity_time" name="activity_time">
@@ -103,24 +92,17 @@ created on 2/22/2016 -->
 							<option class="option_style" value="afternoon">Afternoon</option>
 							<option class="option_style" value="evening">Evening</option>
 						</select>
-					</div>
-				
+					</div>				
 					<label for="group_size">Group size: </label> 
 					<input type="number" id="group_size" name="group_size" min="0" max="100" step="1" value="0"><br /><br />
 					<input class="btn" type="button" value="Submit" onclick="checkVehicle()">
 					<br/><br/>	
-				</form>
-	
-			</div>
-			
+				</form>	
+			</div>			
 			<div class="col-md-12 iframe_container">
-					<iframe id="home_frame" src="images/florida2.jpg"></iframe>
+					<iframe id="home_frame" src="images/florida2.jpg">Sorry, your browser does not support IFrame</iframe>
 					<a id="myLink" href=""></a>
 			</div>
-			
-			
-	
-
 		<div class="row">
 			<div class="col-sm-4 all_vehicles">
 				<img class="img-responsive vehicles" src="images/pontoon2.jpg" alt="pontoon boat" />
@@ -148,7 +130,6 @@ created on 2/22/2016 -->
 			<p>&copy; This site was created by Mark Singleton 02/22/2016</p>
 		</footer>
 	</div><!-- end container -->
-
 <script src="scripts/jquery-2.2.3.min.js"></script>
 <script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/outdoors.js"></script> 

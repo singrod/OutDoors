@@ -9,7 +9,7 @@
 	var vehicle_status;
 	var activity_time;
 	var group_size;
-	var len;
+	var len;	
 
 /*Set date and time*/	
 	function getMyDate(){
@@ -537,27 +537,47 @@
 		}
 		
 	function getBeach(beach){
-		var beachChoice;
+		var myWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 			switch (beach){
-				case 'ormond':
-					beachChoice = "http://www.tripadvisor.com/Tourism-g34517-Ormond_Beach_Florida-Vacations.html";
-					document.getElementById('beach_frame').src = beachChoice;
+				case 'ormond':				
+					if(myWindow > 991){
+						document.getElementById('beach_frame').src = "http://www.tripadvisor.com/Tourism-g34517-Ormond_Beach_Florida-Vacations.html";
+					} else {
+						document.getElementById('beachLink').href = "http://www.tripadvisor.com/Tourism-g34517-Ormond_Beach_Florida-Vacations.html";
+						document.getElementById('beachLink').click();
+					}					
 				break;
 				case 'daytona':
-					beachChoice =  "http://www.tripadvisor.com/Tourism-g34172-Daytona_Beach_Florida-Vacations.html";
-					document.getElementById('beach_frame').src = beachChoice;
+					if(myWindow > 991){
+						document.getElementById('beach_frame').src = "http://www.tripadvisor.com/Tourism-g34172-Daytona_Beach_Florida-Vacations.html";
+					} else {
+						document.getElementById('beachLink').href = "http://www.tripadvisor.com/Tourism-g34172-Daytona_Beach_Florida-Vacations.html";
+						document.getElementById('beachLink').click();
+					}					
 				break;
 				case 'cocoa':
-					beachChoice =  "http://www.tripadvisor.com/Tourism-g34145-Cocoa_Beach_Brevard_County_Florida-Vacations.html";
-					document.getElementById('beach_frame').src = beachChoice;
+					if(myWindow > 991){
+						document.getElementById('beach_frame').src = "http://www.tripadvisor.com/Tourism-g34145-Cocoa_Beach_Brevard_County_Florida-Vacations.html";
+					} else {
+						document.getElementById('beachLink').href = "http://www.tripadvisor.com/Tourism-g34145-Cocoa_Beach_Brevard_County_Florida-Vacations.html";
+						document.getElementById('beachLink').click();
+					}					
 				break;
 				case 'melborne':
-					beachChoice =  "http://www.tripadvisor.com/Tourism-g34434-Melbourne_Beach_Brevard_County_Florida-Vacations.html";
-					document.getElementById('beach_frame').src = beachChoice;
+					if(myWindow > 991){
+						document.getElementById('beach_frame').src = "http://www.tripadvisor.com/Tourism-g34434-Melbourne_Beach_Brevard_County_Florida-Vacations.html";
+					} else {
+						document.getElementById('beachLink').href = "http://www.tripadvisor.com/Tourism-g34434-Melbourne_Beach_Brevard_County_Florida-Vacations.html";
+						document.getElementById('beachLink').click();
+					}					
 				break;
 				default:
-					beachChoice =  "http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/beautiful-nature-high-definition-full-screen-wallpaper-image-free.jpg";
-					document.getElementById('beach_frame').src = beachChoice;
+					if(myWindow > 991){
+						document.getElementById('beach_frame').src =  "http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/beautiful-nature-high-definition-full-screen-wallpaper-image-free.jpg";
+					} else {
+						document.getElementById('beachLink').href =  "http://www.hdwallpapersnew.net/wp-content/uploads/2015/03/beautiful-nature-high-definition-full-screen-wallpaper-image-free.jpg";
+						document.getElementById('beachLink').click();
+					}					
 				break;
 			}
 		}

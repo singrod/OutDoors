@@ -15,8 +15,7 @@ General Contents
 _____________________________________
 */
 body {
-	font-family: Georgia;
-	
+	font-family: Georgia;	
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fffef9+0,f4fffb+100 */
 	background: rgb(255,254,249); /* Old browsers */
 	background: -moz-linear-gradient(45deg,  rgba(255,254,249,1) 0%, rgba(244,255,251,1) 100%); /* FF3.6-15 */
@@ -29,12 +28,10 @@ form{
 	padding-top: 5px;
 	padding-left: 10px;
 	margin-bottom: 5%;
-	text-align: center;
-	
+	text-align: center;	
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(10,130,4,0.75);
 	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: 10px 10px 5px 0px rgba(10,130,10,0.75);
-	
+	box-shadow: 10px 10px 5px 0px rgba(10,130,10,0.75);	
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c539e+0,3fe289+45,45f0f9+100 */
 	background: rgb(44,83,158); /* Old browsers */
 	background: -moz-linear-gradient(45deg,  rgba(44,83,158,1) 0%, rgba(63,226,137,1) 45%, rgba(69,240,249,1) 100%); /* FF3.6-15 */
@@ -42,7 +39,7 @@ form{
 	background: linear-gradient(45deg,  rgba(44,83,158,1) 0%,rgba(63,226,137,1) 45%,rgba(69,240,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#45f0f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */	
 }
-ul.category_selections li{list-style-type: circle; font-size: 1.8em;	color: blue;	text-shadow: .05em .08em .2em green;}
+ul.category_selections li{list-style-type: none; font-size: 1.8em;	color: blue;	text-shadow: .05em .08em .2em green;}
 
 .iframe_container {position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; height: 0; overflow: hidden; margin-bottom: 3%;}
 
@@ -63,7 +60,7 @@ blockquote {border-left-color: black;}
 Typography
 _____________________________________
 */
-#my_article {color: #568B79; font-size: 1.3em; font-weight: bold;}
+.my_article {color: #568B79; font-size: 1.3em; font-weight: bold;}
 
 #date_time {color: #EFB33C;	font-size: 1em; font-weight: bold; padding-top: 70px;}
 
@@ -100,7 +97,7 @@ img{max-width: 100%;}
 
 @media (max-width: 360px){
 	.navbar-inverse .navbar-brand {font-size: 1.20em;}
-	#my_article {font-size: .85em;}
+	.my_article {font-size: .85em;}
 	#myForm h2 {font-size: 1.4em; margin-left: 18%; text-shadow: .05em .08em .3em #fff; padding-bottom: 10px;}
 	form {text-align: left;}
 	#myForm {font-size: .8em; font-weight: bold;}
@@ -113,7 +110,7 @@ img{max-width: 100%;}
 
 @media (min-width: 361px) and (max-width: 440px){	
 	.navbar-inverse .navbar-brand {font-size: 1.50em;}	
-	#my_article {font-size: .85em;}
+	.my_article {font-size: .85em;}
 	#myForm h2 {font-size: 1.4em; margin-left: 18%; text-shadow: .05em .08em .3em #fff;padding-bottom: 10px;}
 	form {text-align: left;}
 	#myForm {font-size: .8em; font-weight: bold;}
@@ -126,7 +123,7 @@ img{max-width: 100%;}
 	
 @media (min-width: 441px) and (max-width: 768px){	
 	.navbar-inverse .navbar-brand {font-size: 1.50em;}	
-	#my_article {font-size: .85em;}
+	.my_article {font-size: .85em;}
 	#myForm h2 {font-size: 1.4em; text-shadow: .05em .08em .3em #fff;padding-bottom: 10px;}
 	form {text-align: center;}
 	#myForm {font-size: 1em; font-weight: bold;}
