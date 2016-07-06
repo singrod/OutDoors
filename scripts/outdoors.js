@@ -42,13 +42,7 @@
 	}
 
 	function checkWaterType(){
-		len = document.getElementsByName('water_type').length;
-		for(var i = 0; i < len; i++){		
-			if(document.getElementsByName('water_type')[i].checked){
-				water_type = document.getElementsByName('water_type')[i].value;
-				break;
-				}
-			}
+		water_type = document.getElementById('water_type').value;
 		checkWaterPreference();
 	}
 
@@ -58,31 +52,20 @@
 	}
 
 	function checkVehicleStatus(){
-		len = document.getElementsByName('vehicle_status').length;
-		for(var i = 0; i < len; i++){		
-			if(document.getElementsByName('vehicle_status')[i].checked){
-				vehicle_status = document.getElementsByName('vehicle_status')[i].value;
-				break;
-				}
-			}
+		vehicle_status = document.getElementById('vehicle_status').value;
 		checkActivityTime();
 	}
 
 	function checkActivityTime(){
-		len = document.getElementsByName('activity_time').length;
-		for(var i = 0; i < len; i++){		
-			if(document.getElementsByName('activity_time')[i].checked){
-				activity_time = document.getElementsByName('activity_time')[i].value;
-				break;
-				}
-			}
+		activity_time = document.getElementById('activity_time').value;
 		checkGroupSize();
 	}
 
 	function checkGroupSize(){
-		group_size = document.getElementById('party_size').value;
+		group_size = document.getElementById('group_size').value;
 		makeRecommendations();
 	}
+
 /*All form info received in assigned to variables*/
 	function makeRecommendations(){
 	
@@ -279,95 +262,236 @@
 	
 /*function assigns recommendation based on input*/
 	function initializeSelection(selection) {
-	switch(selection) {
-		case 'sailboatFreshRental':
-			document.getElementById('home_frame').src = "http://www.beachsidesailing.com/sail-boat-rentals";
-		break;
-		case 'sailboatFreshOwned':
-			document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
-		break;
-		case 'sailboatSaltRental':
-			document.getElementById('home_frame').src = "http://www.beachsidesailing.com/sail-boat-rentals";
-		break;
-		case 'sailboatSaltOwned':
-			document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
-		break;
-		case 'speedboatFreshRental':
-			document.getElementById('home_frame').src = "http://www.boatclub.com/Fleet.aspx";
-		break;
-		case 'speedboatFreshOwned':
-			document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
-		break;
-		case 'speedboatSaltRental':
-			document.getElementById('home_frame').src = "http://www.a1afunrentals.com/Boat-Rentals.html";
-		break;
-		case 'speedboatSaltOwned':
-			document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
-		break;
-		case 'fishing_boatFreshRental':
-			document.getElementById('home_frame').src = "http://www.boatclub.com/WestLakeTohoBoatRental.aspx";
-		break;
-		case 'fishing_boatFreshOwned':
-			document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
-		break;
-		case 'fishing_boatSaltRental':
-			document.getElementById('home_frame').src = "http://fishobsession.com/";
-		break;
-		case 'fishing_boatSaltOwned':
-			document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
-		break;
-		case 'yachtFreshRental':
-			document.getElementById('home_frame').src = "http://www.yachtcharterfleet.com/luxury-charter-yacht-26307/orlando-l.htm";
-		break;
-		case 'yachtFreshOwned':
-			document.getElementById('home_frame').src = "http://shipsusa.com/";
-		break;
-		case 'yachtSaltRental':
-			document.getElementById('home_frame').src = "http://www.yachtcharterfleet.com/luxury-charter-yacht-26307/orlando-l.htm";
-		break;
-		case 'yachtSaltOwned':
-			document.getElementById('home_frame').src = "http://shipsusa.com/";
-		break;
-		case 'canoeFreshRental':
-			document.getElementById('home_frame').src = "http://tinyurl.com/hydemg2";
-		break;
-		case 'canoeFreshOwned':
-			document.getElementById('home_frame').src = "http://www.paddleflorida.net/";
-		break;
-		case 'canoeSaltRental':
-			document.getElementById('home_frame').src = "http://surfinggator.com/Orlando/canoe-kayak/canoe-kayak.html";
-		break;
-		case 'canoeSaltOwned':
-			document.getElementById('home_frame').src = "http://www.paddleflorida.net/";
-		break;
-		case 'kayakFreshRental':
-			document.getElementById('home_frame').src = "http://www.centralfloridakayaktours.com/";
-		break;
-		case 'kayakFreshOwned':
-			document.getElementById('home_frame').src = "http://www.paddleflorida.net/";
-		break;
-		case 'kayakSaltRental':
-			document.getElementById('home_frame').src = "http://surfinggator.com/Orlando/canoe-kayak/canoe-kayak.html";
-		break;
-		case 'kayakSaltOwned':
-			document.getElementById('home_frame').src = "http://www.paddleflorida.net/";
-		break;
-		case 'jetskiFreshRental':
-			document.getElementById('home_frame').src = "http://www.extremejetskioforlando.com/";
-		break;
-		case 'jetskiFreshOwned':
-			document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
-		break;
-		case 'jetskiSaltRental':
-			document.getElementById('home_frame').src = "http://cocoabeachjetskirentals.com/";
-		break;
-		case 'jetskiSaltOwned':
-			document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
-		break;
-	}
-	
+		var myWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		switch(selection) {
+			case 'sailboatFreshRental':				
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.beachsidesailing.com/sail-boat-rentals";
+				} else {
+					document.getElementById('myLink').href = "http://www.beachsidesailing.com/sail-boat-rentals";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'sailboatFreshOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+				} else {
+					document.getElementById('myLink').href = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'sailboatSaltRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.beachsidesailing.com/sail-boat-rentals";
+				} else {
+					document.getElementById('myLink').href = "http://www.beachsidesailing.com/sail-boat-rentals";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'sailboatSaltOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+				} else {
+					document.getElementById('myLink').href = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'speedboatFreshRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.boatclub.com/Fleet.aspx";
+				} else {
+					document.getElementById('myLink').href = "http://www.boatclub.com/Fleet.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'speedboatFreshOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+				} else {
+					document.getElementById('myLink').href = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'speedboatSaltRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.a1afunrentals.com/Boat-Rentals.html";
+				} else {
+					document.getElementById('myLink').href = "http://www.a1afunrentals.com/Boat-Rentals.html";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'speedboatSaltOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+				} else {
+					document.getElementById('myLink').href = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'fishing_boatFreshRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.boatclub.com/WestLakeTohoBoatRental.aspx";
+				} else {
+					document.getElementById('myLink').href = "http://www.boatclub.com/WestLakeTohoBoatRental.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'fishing_boatFreshOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+				} else {
+					document.getElementById('myLink').href = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'fishing_boatSaltRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://fishobsession.com/";
+				} else {
+					document.getElementById('myLink').href = "http://fishobsession.com/";
+					document.getElementById('myLink').click();
+				}			
+			break;
+			case 'fishing_boatSaltOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+				} else {
+					document.getElementById('myLink').href = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'yachtFreshRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.yachtcharterfleet.com/luxury-charter-yacht-26307/orlando-l.htm";
+				} else {
+					document.getElementById('myLink').href = "http://www.yachtcharterfleet.com/luxury-charter-yacht-26307/orlando-l.htm";
+					document.getElementById('myLink').click();
+				}			
+			break;
+			case 'yachtFreshOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://shipsusa.com/";
+				} else {
+					document.getElementById('myLink').href = "http://shipsusa.com/";
+					document.getElementById('myLink').click();
+				}			
+			break;
+			case 'yachtSaltRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.yachtcharterfleet.com/luxury-charter-yacht-26307/orlando-l.htm";
+				} else {
+					document.getElementById('myLink').href = "http://www.yachtcharterfleet.com/luxury-charter-yacht-26307/orlando-l.htm";
+					document.getElementById('myLink').click();
+				}			
+			break;
+			case 'yachtSaltOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://shipsusa.com/";
+				} else {
+					document.getElementById('myLink').href = "http://shipsusa.com/";
+					document.getElementById('myLink').click();
+				}			
+			break;
+			case 'canoeFreshRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://tinyurl.com/hydemg2";
+				} else {
+					document.getElementById('myLink').href = "http://tinyurl.com/hydemg2";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'canoeFreshOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.paddleflorida.net/";
+				} else {
+					document.getElementById('myLink').href = "http://www.paddleflorida.net/";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'canoeSaltRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://surfinggator.com/Orlando/canoe-kayak/canoe-kayak.html";
+				} else {
+					document.getElementById('myLink').href = "http://surfinggator.com/Orlando/canoe-kayak/canoe-kayak.html";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'canoeSaltOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.paddleflorida.net/";
+				} else {
+					document.getElementById('myLink').href = "http://www.paddleflorida.net/";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'kayakFreshRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.centralfloridakayaktours.com/";
+				} else {
+					document.getElementById('myLink').href = "http://www.centralfloridakayaktours.com/";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'kayakFreshOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.paddleflorida.net/";
+				} else {
+					document.getElementById('myLink').href = "http://www.paddleflorida.net/";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'kayakSaltRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://surfinggator.com/Orlando/canoe-kayak/canoe-kayak.html";
+				} else {
+					document.getElementById('myLink').href = "http://surfinggator.com/Orlando/canoe-kayak/canoe-kayak.html";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'kayakSaltOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.paddleflorida.net/";
+				} else {
+					document.getElementById('myLink').href = "http://www.paddleflorida.net/";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'jetskiFreshRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://www.extremejetskioforlando.com/";
+				} else {
+					document.getElementById('myLink').href = "http://www.extremejetskioforlando.com/";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'jetskiFreshOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+				} else {
+					document.getElementById('myLink').href = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'jetskiSaltRental':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "http://cocoabeachjetskirentals.com/";
+				} else {
+					document.getElementById('myLink').href = "http://cocoabeachjetskirentals.com/";
+					document.getElementById('myLink').click();
+				}				
+			break;
+			case 'jetskiSaltOwned':
+				if(myWindow > 991){
+					document.getElementById('home_frame').src = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+				} else {
+					document.getElementById('myLink').href = "https://public.myfwc.com/LE/boatramp/public/default.aspx";
+					document.getElementById('myLink').click();
+				}				
+			break;
+		}	
 }
 
+/*functions brings viewer to destination site*/
 	function getPark(park){
 		var parkChoice;
 			switch (park){
@@ -455,5 +579,6 @@
 				break;
 			}
 		}
-	
+		
+
 	

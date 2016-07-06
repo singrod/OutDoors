@@ -12,7 +12,7 @@ created on 2/22/2016 -->
 <body onload="getMyDate(); getMyTime(); setInterval('getMyTime()', 1000 )">
 
 	<nav class="navbar navbar-inverse navbar-fixed-top"  role="navigation" >
-		<div class="container-fluid">
+		<div class="container">
 			<div class="navbar-header">
 			
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -35,37 +35,36 @@ created on 2/22/2016 -->
 		</div>
 	</nav>
 
-	<div class="container-fluid">	
+	<div class="container">	
 		<div class="row">
-			<div class="col-sm-12 content">
-				
+			<div id="date_time" class="col-sm-12">
 				<p id="current_date"></p>
-				<p id="current_time"></p>				
+				<p id="current_time"></p>
+			</div>
+			<div class="col-sm-12 content">								
 				<blockquote>
 					<p id="my_article">We all know about Walt Disney World, Universal Studios, Sea World, and other major theme parks. These are all great places to have fun with our friends and families. However, this is just the tip of the iceberg. Florida is our country's best playground. If you enjoy being ourdoors, Central Florida has it all. Take a look at what the residents of Central Florida enjoy year-round.</p>
 				</blockquote>
-			</div>
-	</div>
-	<div class="container-fluid">
-			<div class="col-md-4">				
+			</div>			
+		</div>
+			<div class="col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">				
+				
 				<form role="form" id="myForm">
-					<h2>Find your interests:</h2><br/>
-					<h4>Water Type:</h4>
-					<div class="radio-inline">
-						<label for="fresh"><input id="fresh" type="radio" name="water_type" value="fresh" checked>Fresh</label>
-					</div>
-					<div class="radio-inline">
-						<label><input type="radio" name="water_type" value="salt">Salt</label>
-					</div>
-					<div class="radio-inline">
-						<label><input type="radio" name="water_type" value="both">Both</label>
-					</div>
-					<div class="radio-inline">
-						<label><input type="radio" name="water_type" value="none">None</label>
-					</div>
-					<br /><br />			
+				
+					<h2 id="form_title">Find your interests:</h2>
+				
 					<div class="form-group">
-						<label for="water_preference">What is your water location preference? </label>	<br />		
+						<label for="water_type">Water Type: </label>		
+						<select id="water_type" name="water_type">
+							<option class="option_style" value="fresh">Fresh water</option>
+							<option class="option_style" value="salt">Salt water</option>
+							<option class="option_style" value="both">Both</option>
+							<option class="option_style" value="none">None</option>
+						</select>
+					</div>
+						
+					<div class="form-group">
+						<label for="water_preference">Location preference: </label>			
 						<select id="water_preference" name="water_preference">
 							<option class="option_style" value="offshore">Offshore</option>
 							<option class="option_style" value="inshore">Inshore</option>
@@ -73,8 +72,9 @@ created on 2/22/2016 -->
 							<option class="option_style" value="none">None</option>
 						</select>
 					</div>
+					
 					<div class="form-group">
-						<label for="vehicle_type">Vehicle Type:</label><br />						
+						<label for="vehicle_type">Vehicle Type:</label>						
 						<select id="vehicle_type" name="vehicle_type" >
 							<option class="option_style" value="sailboat">Sail Boat</option>
 							<option class="option_style" value="speedboat">Speed Boat</option>
@@ -85,71 +85,65 @@ created on 2/22/2016 -->
 							<option class="option_style" value="jetski">Jetski</option>
 						</select>
 					</div>
-					<br />
-					<h4>Vehicle Status:</h4> 
-					<div class="radio-inline">
-						<label><input type="radio" name="vehicle_status" value="owned" checked>Owned</label>
+					
+					<div class="form-group">
+						<label for="vehicle_status">Vehicle Status: </label>		
+						<select id="vehicle_status" name="vehicle_status">
+							<option class="option_style" value="owned">Owned</option>
+							<option class="option_style" value="rental">Rental</option>
+							<option class="option_style" value="chartered">Chartered</option>
+							<option class="option_style" value="none">None</option>
+						</select>
 					</div>
-					<div class="radio-inline">
-						<label><input type="radio" name="vehicle_status" value="rental">Rental</label>
+					
+					<div class="form-group">
+						<label for="activity_time">Activity Time: </label>		
+						<select id="activity_time" name="activity_time">
+							<option class="option_style" value="early_morning">Early Morning</option>
+							<option class="option_style" value="afternoon">Afternoon</option>
+							<option class="option_style" value="evening">Evening</option>
+						</select>
 					</div>
-					<div class="radio-inline">
-						<label><input type="radio" name="vehicle_status" value="chartered">Chartered</label>
-					</div>
-					<div class="radio-inline">
-						<label><input type="radio" name="vehicle_status" value="none">None</label>
-					</div>
-					<br/><br/>
-					<h4>Activity Time:</h4> 
-					<div class="radio-inline">
-						<label><input type="radio" name="activity_time" value="early_morning" checked>Early Morning</label>
-					</div>
-					<div class="radio-inline">
-						<label><input type="radio" name="activity_time" value="afternoon">Afternoon</label>
-					</div>
-					<div class="radio-inline">
-						<label><input type="radio" name="activity_time" value="evening">Evening</label>
-					</div>
-					<br/><br/>
-					<h4>How many people are in your group?</h4> 
-					<input type="number" id="party_size" name="party_size" min="0" max="100" step="1" value="0">
-					<br/><br/>
+				
+					<label for="group_size">Group size: </label> 
+					<input type="number" id="group_size" name="group_size" min="0" max="100" step="1" value="0"><br /><br />
 					<input class="btn" type="button" value="Submit" onclick="checkVehicle()">
-					<br/><br/>
+					<br/><br/>	
 				</form>
-			<br /><br />	
+	
 			</div>
 			
-			<div class="col-md-8 iframe_container">
+			<div class="col-md-12 iframe_container">
 					<iframe id="home_frame" src="images/florida2.jpg"></iframe>
+					<a id="myLink" href=""></a>
 			</div>
 			
 			
-	</div>
-	<br /><br />
+	
+
 		<div class="row">
-			<div class="col-sm-4">
-				<img class="img-responsive all_vehicles" src="images/pontoon2.jpg" alt="pontoon boat" />
+			<div class="col-sm-4 all_vehicles">
+				<img class="img-responsive vehicles" src="images/pontoon2.jpg" alt="pontoon boat" />
 			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive all_vehicles" src="images/jetski2.jpg" alt="pontoon boat" />
+			<div class="col-sm-4 all_vehicles">
+				<img class="img-responsive vehicles" src="images/jetski2.jpg" alt="pontoon boat" />
 			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive all_vehicles" src="images/sailing2.jpg" alt="pontoon boat" />
+			<div class="col-sm-4 all_vehicles">
+				<img class="img-responsive vehicles" src="images/sailing2.jpg" alt="pontoon boat" />
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
-				<img class="img-responsive all_vehicles" src="images/waterski2.jpg" alt="pontoon boat" />
+			<div class="col-sm-4 all_vehicles">
+				<img class="img-responsive vehicles" src="images/waterski2.jpg" alt="pontoon boat" />
 			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive all_vehicles" src="images/canoe2.jpg" alt="pontoon boat" />
+			<div class="col-sm-4 all_vehicles">
+				<img class="img-responsive vehicles" src="images/canoe2.jpg" alt="pontoon boat" />
 			</div>
-			<div class="col-sm-4">
-				<img class="img-responsive all_vehicles" src="images/fishing2.jpg" alt="pontoon boat" />
+			<div class="col-sm-4 all_vehicles">
+				<img class="img-responsive vehicles" src="images/fishing2.jpg" alt="pontoon boat" />
 			</div>
 		</div>
-		<br /><br />
+		<br />
 		<footer class="col-sm-12 copyright">
 			<p>&copy; This site was created by Mark Singleton 02/22/2016</p>
 		</footer>

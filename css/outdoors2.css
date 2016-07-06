@@ -16,198 +16,133 @@ _____________________________________
 */
 body {
 	font-family: Georgia;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a6ada7+0,f9f9ea+47,b3bead+100 */
-	background: rgb(166,173,167); /* Old browsers */
-	background: -moz-linear-gradient(45deg,  rgba(166,173,167,1) 0%, rgba(249,249,234,1) 47%, rgba(179,190,173,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(45deg,  rgba(166,173,167,1) 0%,rgba(249,249,234,1) 47%,rgba(179,190,173,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(45deg,  rgba(166,173,167,1) 0%,rgba(249,249,234,1) 47%,rgba(179,190,173,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6ada7', endColorstr='#b3bead',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fffef9+0,f4fffb+100 */
+	background: rgb(255,254,249); /* Old browsers */
+	background: -moz-linear-gradient(45deg,  rgba(255,254,249,1) 0%, rgba(244,255,251,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  rgba(255,254,249,1) 0%,rgba(244,255,251,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  rgba(255,254,249,1) 0%,rgba(244,255,251,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffef9', endColorstr='#f4fffb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */	
 }
-
 form{
-	border-radius: 5px;
+	border-radius: 10px;
 	padding-top: 5px;
 	padding-left: 10px;
+	margin-bottom: 5%;
 	text-align: center;
+	
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(10,130,4,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(10,130,10,0.75);
 	
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c539e+0,3fe289+45,45f0f9+100 */
 	background: rgb(44,83,158); /* Old browsers */
 	background: -moz-linear-gradient(45deg,  rgba(44,83,158,1) 0%, rgba(63,226,137,1) 45%, rgba(69,240,249,1) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(45deg,  rgba(44,83,158,1) 0%,rgba(63,226,137,1) 45%,rgba(69,240,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(45deg,  rgba(44,83,158,1) 0%,rgba(63,226,137,1) 45%,rgba(69,240,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#45f0f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#45f0f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */	
 }
+ul.category_selections li{list-style-type: circle; font-size: 1.8em;	color: blue;	text-shadow: .05em .08em .2em green;}
 
-ul.category_selections li{	
-	list-style-type: circle; 
-	font-size: 1.8em;
-	color: blue;
-	text-shadow: .05em .08em .2em green;
-}
+.iframe_container {position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; height: 0; overflow: hidden; margin-bottom: 3%;}
 
-.content {
-	margin-top: 70px;
-}
+.iframe_container iframe {position: absolute;	top: 0; left: 0; width: 98%; height: 98%;}
 
-.iframe_container {
-	position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-	overflow: hidden;
-}
+.vehicles {border-radius: 5%;}
 
-.iframe_container iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-    height: 100%;
-}
+.all_vehicles {padding-bottom: 10px;}
 
-.all_vehicles {
-	padding-bottom: 10px;
-}
+input[type=number] {border-radius: 5px; padding-left: 3px;}
 
+select {border-radius: 5px; padding-left: 3px;}
+
+#group_size {width: 50px;	height: 21px;	padding-left: 6px;}
+
+blockquote {border-left-color: black;}
 /*
 Typography
 _____________________________________
 */
+#my_article {color: #568B79; font-size: 1.3em; font-weight: bold;}
 
-#my_article {
-	color: #568B79;	
-	font-size: 1.3em;
-	font-weight: bold;
-}
+#date_time {color: #EFB33C;	font-size: 1em; font-weight: bold; padding-top: 70px;}
 
-#current_time {
-	font-size: 1.5em;
-	color: #5c0f0c;
-	text-shadow: .05em .08em .2em black;
-}
-#current_date {
-	font-size: 1.5em;
-	color: #5c0f0c;
-	text-shadow: .05em .08em .2em black;
-}
+#form_title {color: black; font-weight: bold; padding-bottom: 10px;}
 
-h2 {
-	color: #8f1e18;
-	text-shadow:#ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
-}
+#myForm {font-size: 1.2em; font-weight: bold; color:#26C233;}
 
-#water_preference {
-	height: 23px;
-	width: 160px;
-	color: #db4900;
-	font-size: .75em;
-}
-#vehicle_type  {
-	height: 23px;
-	width: 160px;
-	color: #db4900;
-	font-size: .75em;
-}
-.option_style   {
-	color: #db4900;
-	background-color: #fff;
-	font-size: .8em;
-}
-#party_size {
-	height: 25px;
-	width: 50px;
-	color: #db4900;
-	font-size: .75em;
-}
+#myForm label {font-size: 1.5em; color: #fff; text-shadow: .05em .08em .3em black; padding-right: 15px;}
 
-#myForm {	
-	font-size: 1.5em;
-	font-weight: bold;
-	color: #8f1e18;
-}
-#myForm label  {
-	font-size: .8em;
-	color: #568B79;
-}
+.btn {-webkit-border-radius: 28; -moz-border-radius: 28; border-radius: 28px; font-family: Georgia; color: #ffffff; font-size: 20px; background: #2c539e; padding: 10px 20px 10px 20px; text-decoration: none;}
 
-.btn {
-  background: #568B79;
-  color: #fff;
- 
-  text-decoration: none;
- 
-}
-.btn:hover {
-  background: #ced6a0;
-  
-  text-decoration: none;
-}
-.btn:focus {
-   outline: 0;
-}
-
+.btn:hover {background: #45f0f9; text-decoration: none;}
 /*
 Header & Navigation
 _____________________________________
 */
-
 .navbar-inverse {
-
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c539e+0,3fe289+45,45f0f9+100 */
 	background: rgb(44,83,158); /* Old browsers */
 	background: -moz-linear-gradient(45deg,  rgba(44,83,158,1) 0%, rgba(63,226,137,1) 45%, rgba(69,240,249,1) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(45deg,  rgba(44,83,158,1) 0%,rgba(63,226,137,1) 45%,rgba(69,240,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(45deg,  rgba(44,83,158,1) 0%,rgba(63,226,137,1) 45%,rgba(69,240,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#45f0f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-   
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#45f0f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */   
 }
-.navbar-inverse .navbar-brand {
-    color: #fff;
-	font-size: 1.5em;
-}
-.navbar-inverse .navbar-nav>li>a {
-    color: #5c0f0c;
-}
+.navbar-inverse .navbar-brand {color: #fff; font-size: 2.2em; text-shadow: .05em .08em .2em black;}
+.navbar-inverse .navbar-nav>li>a {font-size: 1.2em; color: black; font-weight: bold;}
 
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-	color: #fff;
-	background-color: #568B79;
-}
-
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {color: #fff; background-color: #568B79;}
 /*
 Images & Media
 _____________________________________
 */
 img{max-width: 100%;}
 
+@media (max-width: 360px){
+	.navbar-inverse .navbar-brand {font-size: 1.20em;}
+	#my_article {font-size: .85em;}
+	#myForm h2 {font-size: 1.4em; margin-left: 18%; text-shadow: .05em .08em .3em #fff; padding-bottom: 10px;}
+	form {text-align: left;}
+	#myForm {font-size: .8em; font-weight: bold;}
+	#myForm label {font-size: 1.2em; color: #fff; text-shadow: .05em .08em .3em black; padding-right: 8px;}
+	.btn {font-size: 12px; width: 60px;	height: 30px; padding: 0; margin-left: 39%;}
+	footer {font-size: .75em; margin-bottom: 10%;}
+	blockquote {border-left-color: #45f0f9;}
+	.navbar-inverse .navbar-nav>li>a {color: #fff;}
+	.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {color: yellow; background-color: #2c539e;}}	
 
-
+@media (min-width: 361px) and (max-width: 440px){	
+	.navbar-inverse .navbar-brand {font-size: 1.50em;}	
+	#my_article {font-size: .85em;}
+	#myForm h2 {font-size: 1.4em; margin-left: 18%; text-shadow: .05em .08em .3em #fff;padding-bottom: 10px;}
+	form {text-align: left;}
+	#myForm {font-size: .8em; font-weight: bold;}
+	#myForm label {font-size: 1.2em; color: #fff; text-shadow: .05em .08em .3em black; padding-right: 8px;}
+	.btn {font-size: 12px; width: 60px;	height: 30px; padding: 0; margin-left: 39%;}
+	footer {font-size: .75em; margin-bottom: 10%;}
+	blockquote {border-left-color: #45f0f9;}
+	.navbar-inverse .navbar-nav>li>a {color: #fff;}
+	.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {color: yellow; background-color: #2c539e;}}
+	
+@media (min-width: 441px) and (max-width: 768px){	
+	.navbar-inverse .navbar-brand {font-size: 1.50em;}	
+	#my_article {font-size: .85em;}
+	#myForm h2 {font-size: 1.4em; text-shadow: .05em .08em .3em #fff;padding-bottom: 10px;}
+	form {text-align: center;}
+	#myForm {font-size: 1em; font-weight: bold;}
+	#myForm label {font-size: 1.3em; color: #fff; text-shadow: .05em .08em .3em black; padding-right: 8px;}
+	.btn {font-size: 12px; width: 60px;	height: 30px; padding: 0;}
+	footer {font-size: .75em; margin-bottom: 10%;}
+	blockquote {border-left-color: #45f0f9;}
+	.navbar-inverse .navbar-nav>li>a {color: #fff;}
+	.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {color: yellow; background-color: #2c539e;}}
+	
+@media (min-width: 767px) and (max-width: 992px){
+	.navbar-inverse .navbar-brand {font-size: 1.30em;}
+	.navbar-inverse .navbar-nav>li>a {font-size: .9em;}	
+	.navbar-right {float: right!important; margin-right: -35px;}}
 /*
 Footer
 _____________________________________
 */
-
-.copyright p{
-	text-align: center;
-	color: #5c0f0c;
-	font-size: 1.25em;
-	padding-top: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.copyright p {opacity: 0.5; text-align: center; color: #5c0f0c; font-size: 1.20em; padding-top: 10px;}
